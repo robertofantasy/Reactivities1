@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Domain
 {
-    public class Activity1
+    public class Activity
     {
         public Guid Id { get; set; }
         public int MyProperty { get; set; }

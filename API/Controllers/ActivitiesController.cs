@@ -5,7 +5,7 @@ using Persistence;
 
 namespace API.Controllers
 {
-    public class ActivitiesController : BaseApiControllers
+    public class ActivitiesController : BaseApiController
     {
         private readonly DataContext _context;
 
@@ -15,13 +15,13 @@ namespace API.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<List<Activity1>>> GetActivity()
+        public async Task<ActionResult<List<Activity>>> GetActivity()
         {
             return await _context.Activities.ToListAsync();
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<Activity1>> GetActivity(Guid id)
+        public async Task<ActionResult<Activity>> GetActivity(Guid id)
         {
             return await _context.Activities.FindAsync(id);
         }
